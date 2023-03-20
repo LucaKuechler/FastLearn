@@ -3,7 +3,7 @@
 ## Setup
 1. Clone the repository and change into it:
     ```bash
-    git clone https://gitlab.ordix.de/gitlab/lck/forensik-workshop.git && cd forensik-workshop
+    git clone https://github.com/LucaKuechler/FastLearn && cd FastLearn/forensik-workshop
     ```
 
 2. Delete the .git folder from the repository, we don't need it.
