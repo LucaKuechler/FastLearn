@@ -1,0 +1,7 @@
+{
+    "databaseName": "ordix",
+    "hostName": "localhost",
+    "port": 3306, 
+    "username": "ordix",
+    "password": "ordix"
+}

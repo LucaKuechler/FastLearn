@@ -1,0 +1,51 @@
+version: "3"
+services:
+  nvim-1:
+    image: neovim-workshop:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7651:22"
+  nvim-2:
+    image: neovim-workshop:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7652:22"
+  nvim-3:
+    image: neovim-workshop:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7653:22"
+  nvim-4:
+    image: neovim-workshop:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7654:22"
+  nvim-5:
+    image: neovim-workshop:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7655:22"
+  nvim-6:
+    image: neovim-workshop:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7656:22"
+  nvim-7:
+    image: neovim-workshop:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "7657:22"

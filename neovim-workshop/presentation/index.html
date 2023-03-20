@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css" />
+	<link rel="stylesheet" href="dist/reveal.css" />
+	<link rel="stylesheet" href="dist/theme/white.css" />
+
+	<!-- Theme used for syntax highlighted code -->
+	<!-- https://github.com/highlightjs/highlight.js/tree/main/src/styles -->
+	<link rel="stylesheet" href="ordix/themes/horizon-dark.css" />
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="ordix/template.css" />
+	<link rel="stylesheet" href="custom/style.css" />
+</head>
+
+<body>
+	<header id="header">
+		<p id="masterTitle"></p>
+		<img src="ordix/images/logo.svg" />
+	</header>
+
+	<div class="reveal">
+		<div class="slides">
+			<section id="startpage"></section>
+
+            <section title="">
+                <img src="./custom/reaction.jpg" height="500"> 
+			</section>
+
+			<!-- START CUSTOM SLIDES -->
+			<section data-markdown title="Topics">
+				<div class="centerinside">
+				<textarea data-template>
+                1. CHANGES 🔎
+                2. INTRODUCION &amp; CONFIGURATION 👨‍🎓👩‍🎓
+                3. YOUR TURN 🔬
+				</textarea>
+				</div>
+			</section>
+
+            <section title="CHANGES">
+				<div class="newTopicBar">
+					WHY I DECIDED TO USE VIM 🔎
+				</div>
+			</section>
+
+			<section title="VSCODE KEYMAP">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/N2bXEUSAiTI?start=450" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</section>
+
+            <section title="VSCODE KEYMAP">
+                <img src="./custom/vim-extension.png" height="500"> 
+			</section>
+
+            <section title="VSCODE KEYMAP">
+                <img src="./custom/vscode.png" height="500"> 
+			</section>
+
+
+            <section data-markdown title="VSCODE KEYMAP">
+				<div class="centerinside">
+				<textarea data-template>
+                    * 500 Zeilen VSCode Configuration
+                    * 850 Zeilen Extension
+				</textarea>
+				</div>
+			</section>
+
+            <section title="VSCODE KEYMAP">
+                <img src="./custom/my-extension.png" height="500"> 
+			</section>
+
+            <section data-markdown title="WHY STILL CHANGE">
+				<div class="centerinside">
+				<textarea data-template>
+                    * Speed
+                        * VSCode 30 Seconds till useable
+                    * Configuration
+                        * Jump By Word, Jump by Class, ...
+                        * Only JSON no logic
+                        * Plugins not extensiable
+                    * UI
+                        * unecessary ui elements that can not be hidden
+				</textarea>
+				</div>
+			</section>
+
+            <section data-markdown title="WHY STILL CHANGE">
+				<div class="centerinside">
+				<textarea data-template>
+                    * Speed
+                        * Neovim 250ms till useable
+                    * Configuration
+                    * UI
+                        * ui elements that have only visual loading time
+				</textarea>
+				</div>
+			</section>
+
+            <section title="How it looks">
+                <img src="./custom/nvim.png"> 
+			</section>
+
+            <section title="INTRODUCION &amp; CONFIGURATION">
+				<div class="newTopicBar">
+					INTRODUCION TO NEOVIM CONFIGURATION 👨‍🎓👩‍🎓
+                </div>
+			</section>
+
+            <section data-markdown title="INSTALLATION">
+				<div class="centerinside">
+				<textarea data-template>
+                    * [Source](https://github.com/neovim/neovim/wiki/Building-Neovim)
+                    * [Ubuntu only install from PPA](https://askubuntu.com/questions/430008/how-to-install-neovim-on-ubuntu#430013)
+                    * [Arch](https://wiki.archlinux.org/title/Neovim)
+				</textarea>
+				</div>
+			</section>
+
+            <section data-auto-animate title="OPEN CONFIG">
+                <pre data-id="code-animation" class="shell">
+                    <code data-trim data-line-numbers="">
+                    $ nvim ~/.config/nvim/init.lua
+                    </code>
+                </pre>
+			</section>
+
+            <section data-auto-animate title="OPEN CONFIG">
+                <pre data-id="code-animation" class="lua">
+                    <code data-trim data-line-numbers="">
+require("plugins")
+require("keymappings")
+require("settings")
+require("colorscheme")
+
+-- Plugins Config
+require("config.telescope")
+require("config.bufferline")
+require("config.statusline")
+require("config.autocompletion")
+require("config.tabnine")
+require("config.nvimtree")
+require("config.commentary")
+require("config.treesitter")
+require("config.indent")
+require("config.autopair")
+require("config.comments")
+require("config.project")
+
+-- LSP Config
+require("lsp.lsp-config")
+require("lsp.lsp-python")
+require("lsp.lsp-go")
+require("lsp.lsp-docker")
+require("lsp.lsp-lua")
+require("lsp.lsp-php")
+
+-- Linter
+require("linter.test")
+
+-- Format
+require("formatter.test")
+
+-- Git
+require("git.gitsigns")
+
+-- Debugger
+require("debugger.debugger")
+require("debugger.ui")
+require("debugger.python")
+require("debugger.go")
+                    </code>
+                </pre>
+			</section>
+
+            <section title="YOUR TURN">
+				<div class="newTopicBar">
+                YOUR TURN 🔬
+                </div>
+			</section>
+
+            <section data-markdown title="HELP">
+				<div class="centerinside">
+				<textarea data-template>
+                    * [HILFE README](https://github.com/LucaKuechler/Neovim-Workshop/blob/master/README.md)
+				</textarea>
+				</div>
+			</section>
+
+            <section title="How it looks">
+                <img src="./custom/meme.png"> 
+			</section>
+			<!-- END CUSTOM SLIDES  -->
+
+			<section id="endpage"></section>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<!--can be set hidden-->
+		<p id="caption">
+			<span class="title"></span>,
+			<span class="date"></span>,
+			<span class="place"></span>,
+			<span class="speaker"></span>
+		</p>
+	</footer>
+
+	<section id="newStartpage" style="display: none;">
+		<div class="slide">
+			<div class="left-top">
+				<p class="title">Titel</p>
+			</div>
+			<div class="left-bot">
+				<div class="border">
+					<div class="dark-blue-one"></div>
+					<div class="dark-blue-two"></div>
+				</div>
+				<div class="main">
+					<p class="title">Veranstaltungstitel</p>
+					<p>
+						<span class="date">Datum</span>,
+						<span class="place">Ort</span>
+					</p>
+					<p class="speaker">Referent</p>
+				</div>
+				<div class="footer">
+					<p class="mail">info@ordix.de</p>
+					<p class="web">www.ordix.de</p>
+				</div>
+			</div>
+			<div class="right">
+				<img src="ordix/images/Startpage.PNG" />
+			</div>
+		</div>
+	</section>
+
+    <sec
+
+	<section id="newEndpage" style="display: none;">
+		<div class="slide">
+			<div class="left-top"></div>
+			<div class="left-bot">
+				<div class="border">
+					<div class="dark-blue-one"></div>
+					<div class="dark-blue-two"></div>
+				</div>
+				<div class="main">
+					<p class="end-text">
+						Vielen Dank für <br />Ihre Aufmerksamkeit
+					</p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="text-container">
+					<p>ORDIX AG</p>
+					<p>
+						Aktiengesellschaft für
+						Softwareentwicklung,<br />Schulung, Beratung
+						und Systemintegration
+					</p>
+
+					<br class="break" />
+					<p>Zentrale Paderborn</p>
+					<p>Karl-Schurz-Straße 19a</p>
+					<p>33100 Paderborn</p>
+					<p>Tel.: 05251 1063-0</p>
+					<p>Fax: 0180 1 67349 0</p>
+
+					<br class="break" />
+					<p>Seminarzentrum Wiesbaden</p>
+					<p>Kreuzberger Ring 13</p>
+					<p>65205 Wiesbaden</p>
+					<p>Tel.: 0611 77840-00</p>
+
+					<br class="break" />
+					<p>info@ordix.de</p>
+					<p href="https://www.ordix.de/" style="color: #0000FF; text-decoration: underline;">
+						https://www.ordix.de/</p>
+				</div>
+				<img class="logo2" src="ordix/images/Logo2.png" />
+			</div>
+	</section>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			center: true,
+			disableLayout: false,
+			slideNumber: true,
+			controls: true,
+			overview: true,
+			previewLinks: true,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+		});
+	</script>
+	<script src="ordix/template.js"></script>
+	<script src="CONFIG.js"></script>
+</body>
+
+</html>
