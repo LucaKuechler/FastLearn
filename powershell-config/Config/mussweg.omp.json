@@ -1,0 +1,143 @@
+{
+	"$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+	"blocks": [
+		{
+			"type": "prompt",
+			"alignment": "left",
+			"segments": [
+				{
+					"comment": "virtual env bar",
+					"type": "python",
+					"style": "powerline",
+					"foreground": "#100e23",
+					"background": "#906cff",
+					"properties": {
+						"prefix": " \uE235 ",
+						"display_virtual_env": true,
+						"display_mode": "environment",
+						"display_version": false,
+						"display_default": false
+					}
+				},
+				{
+					"type": "session",
+					"style": "powerline",
+					"foreground": "#100e23",
+					"background": "#ffffff",
+					"properties": {
+						"prefix": " @",
+						"display_host": false,
+						"display_user": true
+					}
+				},
+				{
+					"comment": "when user is looged in as root bar",
+					"type": "root",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#100e23",
+					"background": "#ffe9aa"
+				},
+				{
+					"comment": "Bar with the current path",
+					"type": "path",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#100e23",
+					"background": "#91ddff",
+					"properties": {
+						"folder_icon": "\uF115",
+						"folder_separator_icon": " \uE0B1 ",
+						"style": "full"
+					}
+				},
+				{
+					"comment": "Github Bar color",
+					"type": "git",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#193549",
+					"background": "#95ffa4"
+				},
+				{
+					"type": "executiontime",
+					"style": "powerline",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#ffffff",
+					"background": "#8800dd",
+					"properties": {
+						"threshold": 500,
+						"style": "austin",
+						"prefix": " <#fefefe>\ufbab</> "
+					}
+				},
+				{
+					"comment": "error bar",
+					"type": "exit",
+					"style": "powerline",
+					"powerline_symbol": "\u276F",
+					"foreground": "#ffffff",
+					"background": "#80ff8b",
+					"properties": {
+						"prefix": " \uE20F"
+					}
+				}
+			]
+		},
+		{
+			"comment": "system time bar",
+			"alignment": "right",
+			"type": "prompt",
+			"segments": [
+				{
+					"comment": "system time bar",
+					"type": "time",
+					"style": "powerline",
+					"powerline_symbol": "",
+					"foreground": "#007ACC",
+					"properties": {
+						"time_format": "[15:04:05]"
+					}
+				},
+				{
+					"type": "battery",
+					"style": "plain",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#193549",
+					"background": "#ffeb3b",
+					"properties": {
+						"discharging_icon": " ",
+						"charging_icon": "\u26A1 ",
+						"charged_icon": "\u26A1 ",
+						"color_background": true,
+						"charged_color": "#4caf50",
+						"charging_color": "#4caf50",
+						"discharging_color": "#40c4ff",
+						"postfix": "\uF295  ",
+						"display_charging": true
+					}
+				}
+			]
+		},
+		{
+			"type": "newline"
+		},
+		{
+			"type": "prompt",
+			"alignment": "left",
+			"segments": [
+				{
+					"type": "text",
+					"style": "plain",
+					"powerline_symbol": "\uE0B0",
+					"foreground": "#ffffff",
+					"properties": {
+						"prefix": "🚀",
+						"text": "\u00BB"
+					}
+				}
+			]
+		}
+	],
+	"final_space": true
+}
