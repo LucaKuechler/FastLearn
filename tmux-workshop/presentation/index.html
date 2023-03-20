@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css" />
+	<link rel="stylesheet" href="dist/reveal.css" />
+	<link rel="stylesheet" href="dist/theme/white.css" />
+
+	<!-- Theme used for syntax highlighted code -->
+	<!-- https://github.com/highlightjs/highlight.js/tree/main/src/styles -->
+	<link rel="stylesheet" href="ordix/themes/horizon-dark.css" />
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="ordix/template.css" />
+	<link rel="stylesheet" href="custom/style.css" />
+</head>
+
+<body>
+	<header id="header">
+		<p id="masterTitle"></p>
+		<img src="ordix/images/logo.svg" />
+	</header>
+
+	<div class="reveal">
+		<div class="slides">
+			<section id="startpage"></section>
+
+			<!-- START CUSTOM SLIDES -->
+			<section data-markdown title="TOPICS">
+				<div class="centerinside">
+					<textarea data-template>
+					1. ABOUT
+					2. LOCAL / REMOTE
+					3. CONFIGURATION
+					4. USAGE
+				</textarea>
+				</div>
+			</section>
+
+
+			<!-- START ABOUT -->
+            <section title="ABOUT">
+				<div class="newTopicBar">
+					1. ABOUT
+				</div>
+			</section>
+
+            <section data-auto-animate title="PROBLEM">
+                <h2>DAS PROBLEM!</h2> 
+            </section>
+
+            <section data-auto-animate title="WINDOWS TERMINAL">
+                <img height="500px" src="custom/images/windows-terminal.png"></img>
+            </section>
+
+            <section data-auto-animate title="WINDOWS TERMINAL">
+                <img height="500px" src="custom/images/wt-split.png"></img>
+            </section>
+            
+            <section data-auto-animate title="TMUX LOGO">
+                <img src="custom/images/logo.png"></img>
+            </section>
+
+            <section data-auto-animate title="TMUX">
+                <img src="custom/images/tmux.png"></img>
+            </section>
+
+            <section data-auto-animate title="TMUX PANES">
+                <img height="500px" src="custom/images/wt-pane.png"></img>
+            </section>
+
+            <section data-auto-animate title="TMUX WINDOWS">
+                <img height="500px" src="custom/images/wt-window.png"></img>
+            </section>
+
+            <section data-auto-animate title="TMUX SESSIONS">
+                <img src="custom/images/wt-session.png"></img>
+            </section>
+
+            <section data-auto-animate title="TMUX">
+                <img src="custom/images/afterconfig.png"></img>
+            </section>
+			<!-- END ABOUT -->
+
+
+			<!-- START LOCAL/REMOTE -->
+            <section title="LOCAL / REMOTE">
+				<div class="newTopicBar">
+					2. LOCAL / REMOTE
+				</div>
+			</section>
+
+            <section title="ADVANTAGE">
+                <h2>BIGGEST ADVANTAGE!</h2>
+			</section>
+
+            <section title="CONNECT VIA SSH">
+				<pre class="shell" data-id="code-animation">
+                    <code  data-trim >
+                    $ ssh lck@lernix.ordix.de
+
+                    $ tmux
+                    </code>
+                </pre>
+			</section>
+            
+            <section title="TMUX">
+                <img src="custom/images/afterconfig.png"></img>
+			</section>
+
+            <section title="APT">
+				<pre class="shell" data-id="code-animation">
+                    <code  data-trim >
+                    $ sudo apt install large-package-that-takes-forever 
+                    </code>
+                </pre>
+			</section>
+
+            <section title="PRAY 4 VPN">
+                <div class="r-stack">
+                  <img class="fragment" src="custom/images/homeoffice.jpg">
+                  <img class="fragment" src="custom/images/nordvpn.jpg">
+                  <img class="fragment" src="custom/images/bangheadwall.jpg">
+                </div>
+			</section>
+
+            <section title="CONNECTION LOST">
+                <h3>Hey you lost your connection or something like that.</h3>
+			</section>
+
+            <section title="RECONNECT">
+				<pre class="shell" data-id="code-animation">
+                    <code  data-trim >
+                    $ ssh lck@lernix.ordix.de
+
+                    $ tmux attach
+                    </code>
+                </pre>
+			</section>
+
+            <section title="I ❤ TMUX">
+                <img src="custom/images/afterconfig.png"></img>
+			</section>
+
+            <section title="LOCAL">
+                <img height="500px" src="custom/images/closewt.png"></img>
+			</section>
+			<!-- END LOCAL/REMOTE -->
+
+
+			<!-- START INSTALLATION / CONFIGURATION -->
+            <section title="CONFIGURATION">
+				<div class="newTopicBar">
+					3. CONFIGURATION
+				</div>
+			</section>
+
+            <section data-auto-animate title="START UP">
+                <img height="500px" src="custom/images/startup.png"></img>
+            </section>
+
+            <section data-auto-animate title="START UP">
+                <img src="custom/images/afterconfig.png"></img>
+            </section>
+
+			<!-- END INSTALLATION / CONFIGURATION -->
+
+
+			<!-- START USAGE -->
+            <section title="USAGE">
+				<div class="newTopicBar">
+					4. USAGE
+				</div>
+			</section>
+
+            <section title="PREFIX">
+                <h2><span style="color: red;">&lt;PREFIX&gt;</span> w</h2>
+			</section>
+
+            <section title="DEFAULT PREFIX">
+                <h2><span style="color: red;">&lt;CTRL + b&gt;</span> w</h2>
+			</section>
+
+            <section title="MY PREFIX">
+                <h2><span style="color: red;">&lt;CTRL + SPACE&gt;</span> w</h2>
+			</section>
+
+            <section data-auto-animate title="LIVE DEMO">
+                <img height="500px" src="custom/images/livedemo.jpg"></img>
+            </section>
+			<!-- END USAGE -->
+
+			<section id="endpage"></section>
+		</div>
+	</div>
+
+	<footer id="footer">
+		<!--can be set hidden-->
+		<p id="caption">
+			<span class="title"></span>,
+			<span class="date"></span>,
+			<span class="place"></span>,
+			<span class="speaker"></span>
+		</p>
+	</footer>
+
+	<section id="newStartpage" style="display: none;">
+		<div class="slide">
+			<div class="left-top">
+				<p class="title">Titel</p>
+			</div>
+			<div class="left-bot">
+				<div class="border">
+					<div class="dark-blue-one"></div>
+					<div class="dark-blue-two"></div>
+				</div>
+				<div class="main">
+					<p class="title">Veranstaltungstitel</p>
+					<p>
+						<span class="date">Datum</span>,
+						<span class="place">Ort</span>
+					</p>
+					<p class="speaker">Referent</p>
+				</div>
+				<div class="footer">
+					<p class="mail">info@ordix.de</p>
+					<p class="web">www.ordix.de</p>
+				</div>
+			</div>
+			<div class="right">
+				<img src="ordix/images/Startpage.PNG" />
+			</div>
+		</div>
+	</section>
+
+	<section id="newEndpage" style="display: none;">
+		<div class="slide">
+			<div class="left-top"></div>
+			<div class="left-bot">
+				<div class="border">
+					<div class="dark-blue-one"></div>
+					<div class="dark-blue-two"></div>
+				</div>
+				<div class="main">
+					<p class="end-text">
+						Vielen Dank für <br />Ihre Aufmerksamkeit
+					</p>
+				</div>
+			</div>
+			<div class="right">
+				<div class="text-container">
+					<p>ORDIX AG</p>
+					<p>
+						Aktiengesellschaft für
+						Softwareentwicklung,<br />Schulung, Beratung
+						und Systemintegration
+					</p>
+
+					<br class="break" />
+					<p>Zentrale Paderborn</p>
+					<p>Karl-Schurz-Straße 19a</p>
+					<p>33100 Paderborn</p>
+					<p>Tel.: 05251 1063-0</p>
+					<p>Fax: 0180 1 67349 0</p>
+
+					<br class="break" />
+					<p>Seminarzentrum Wiesbaden</p>
+					<p>Kreuzberger Ring 13</p>
+					<p>65205 Wiesbaden</p>
+					<p>Tel.: 0611 77840-00</p>
+
+					<br class="break" />
+					<p>info@ordix.de</p>
+					<p href="https://www.ordix.de/" style="color: #0000FF; text-decoration: underline;">
+						https://www.ordix.de/</p>
+				</div>
+				<img class="logo2" src="ordix/images/Logo2.png" />
+			</div>
+	</section>
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			center: true,
+			disableLayout: false,
+			slideNumber: true,
+			controls: true,
+			overview: true,
+			previewLinks: true,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+		});
+	</script>
+	<script src="ordix/template.js"></script>
+	<script src="CONFIG.js"></script>
+</body>
+
+</html>
