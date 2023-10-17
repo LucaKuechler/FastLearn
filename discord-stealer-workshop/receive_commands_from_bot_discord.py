@@ -7,48 +7,54 @@ import websocket
 import threading
 import time
 import json
+import configparser
 
-TOKEN = "TOKEN"
 URL = "wss://gateway.discord.gg/?v=9&encording=json"
+
+
+def parse_token_from_config():
+    config = configparser.ConfigParser()
+    config.read("config.ini")
+
+    return config["discord"]["token"]
+
 
 def send_json_request(ws, request) -> None:
     ws.send(json.dumps(request))
+
 
 def recieve_json_response(ws):
     response = ws.recv()
     if response:
         return json.loads(response)
 
+
 def heartbeat(interval, ws):
     print("Heatbeat has begun")
     while True:
         time.sleep(interval)
-        heatbeatJSON = {
-                "op": 1,
-                "d": "null"
-        }
+        heatbeatJSON = {"op": 1, "d": "null"}
 
         send_json_request(ws, heatbeatJSON)
         print("Heartbeat has been send")
+
 
 def main() -> None:
     ws = websocket.WebSocket()
     ws.connect(URL)
     event = recieve_json_response(ws)
 
-    heartbeat_interval = event['d']['heartbeat_interval'] / 1000
+    heartbeat_interval = event["d"]["heartbeat_interval"] / 1000
     threading._start_new_thread(heartbeat, (heartbeat_interval, ws))
+
+    token = parse_token_from_config()
 
     payload = {
         "op": 2,
         "d": {
-            "token": TOKEN,
-            "properties": {
-                "$os": "linux",
-                "$browser": "other",
-                "$device": "pc" 
-            } 
-        }
+            "token": token,
+            "properties": {"$os": "linux", "$browser": "other", "$device": "pc"},
+        },
     }
 
     send_json_request(ws, payload)
@@ -56,9 +62,10 @@ def main() -> None:
     while True:
         event = recieve_json_response(ws)
 
-        if event['t'] == 'MESSAGE_CREATE':
-            message_content = event['d']['content']
+        if event["t"] == "MESSAGE_CREATE":
+            message_content = event["d"]["content"]
             print(f"Command To Execute On My Machine: {message_content}")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()
