@@ -1,0 +1,19 @@
+title: stop multiple services
+status: experimental
+description: Detects usage of the Ping utility
+references:
+    - https://symantec-enterprise-blogs.security.com/blogs/threat-intelligence/3am-ransomware-lockbit
+author: mussweg
+date: 2023/08/16
+modified: 2023/10/10
+tags:
+    - attack.t1590.005
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        OriginalFileName:
+            - 'Discord rat.exe'
+    condition: selection
+level: critical

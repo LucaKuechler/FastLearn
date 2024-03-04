@@ -1,0 +1,22 @@
+title: Other Application Accesses Discord Gateway
+status: experimental
+description: Detects a DNS request to the Discord Gateway excluding discord itself.
+references:
+  - https://lucakuechler.github.io/
+author: mussweg
+date: 2023/08/16
+modified: 2023/10/10
+tags:
+  - attack.t1071.001 
+logsource:
+  category: dns_query
+  product: windows
+detection:
+  dns_request:
+    QueryName|contains:
+      - 'gateway.discord.gg'
+  from_discord:
+    ProcessName:
+      - 'Discord.exe'
+    condition: dns_request and not from_discord
+level: critical

@@ -38,6 +38,8 @@ ws.addEventListener('message', function incoming(data) {
       break;
   }
 
+  console.log("Type: ", t);
+
   switch (t) {
     // IF MESSAGE IS CREATED, IT WILL LOG IN THE CONSOLE
     case 'MESSAGE_CREATE':

